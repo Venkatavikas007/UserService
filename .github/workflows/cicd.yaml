@@ -26,7 +26,7 @@ jobs:
       run: ls -lh target/
 
     - name: Docker Login
-      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets. }}" --password-stdin
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Build and Push Docker Image
       run: |
